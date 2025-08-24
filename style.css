@@ -1,0 +1,48 @@
+body {
+  background: #16213e;
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+header h1 {
+  color: #ffd700;
+}
+
+.slot-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.reel {
+  width: 80px;
+  height: 80px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 8px;
+  border: 2px solid #ffd700;
+}
+
+#spin {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #e94560;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#log {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: right;
+}
