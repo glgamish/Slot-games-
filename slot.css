@@ -1,7 +1,193 @@
-body { background:#16213e; color:#fff; font-family:sans-serif; text-align:center; padding:20px; }
-header h1 { color:#ffd700; }
-.slot-container { display:flex; justify-content:center; gap:10px; margin:20px auto; }
-.reel { width:80px; height:80px; background:#000; display:flex; align-items:center; justify-content:center; font-size:2rem; border-radius:8px;}
-#spin { padding:10px 20px; font-size:16px; background:#e94560; border:none; border-radius:5px; cursor:pointer;}
-#log { margin-top:20px; max-height:200px; overflow-y:auto; text-align:right; }
+body {
+  background: #16213e;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  line-height: 1.6;
+}
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+header h1 {
+  color: #ffd700;
+  margin: 0;
+  font-size: 2rem;
+}
+
+#balance {
+  font-size: 1.2rem;
+  background: rgba(255, 215, 0, 0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #ffd700;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.bet-info {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.rules {
+  text-align: right;
+}
+
+.rules h3 {
+  margin-top: 0;
+  color: #ffd700;
+}
+
+.rules ul {
+  padding-right: 20px;
+  margin: 0;
+}
+
+.slot-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto;
+  max-width: 300px;
+}
+
+.reel {
+  width: 100px;
+  height: 100px;
+  background: #0f3460;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border-radius: 10px;
+  border: 3px solid #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.reel.spinning {
+  animation: spin 0.1s infinite;
+}
+
+@keyframes spin {
+  0% { transform: translateY(-10px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(-10px); }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+#spin {
+  background: #e94560;
+  color: white;
+}
+
+#spin:hover {
+  background: #ff6b81;
+  transform: scale(1.05);
+}
+
+#reset {
+  background: #4e9f3d;
+  color: white;
+}
+
+#reset:hover {
+  background: #6bc757;
+  transform: scale(1.05);
+}
+
+#result {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.win {
+  color: #4e9f3d;
+  animation: pulse 1s infinite;
+}
+
+.lose {
+  color: #e94560;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+#log {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: right;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#log div {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .game-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .slot-container {
+    gap: 10px;
+  }
+  
+  .reel {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+  }
