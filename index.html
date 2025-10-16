@@ -7,13 +7,35 @@
   <link rel="stylesheet" href="slot.css">
 </head>
 <body>
-  <header><h1>🎰 سلوتس للأصدقاء</h1><div id="balance">رصيدك: 1000</div></header>
+  <header>
+    <h1>🎰 سلوتس للأصدقاء</h1>
+    <div id="balance">رصيدك: 1000</div>
+  </header>
+  
+  <div class="game-info">
+    <div class="bet-info">الرهان: 10 عملات</div>
+    <div class="rules">
+      <h3>قواعد اللعبة:</h3>
+      <ul>
+        <li>3 رموز متطابقة: فوز كبير (50-100 عملة)</li>
+        <li>2 رمزين متطابقين: فوز صغير (20 عملة)</li>
+        <li>لا تطابق: خسارة الرهان</li>
+      </ul>
+    </div>
+  </div>
+  
   <div class="slot-container">
     <div class="reel" id="r1">❔</div>
     <div class="reel" id="r2">❔</div>
     <div class="reel" id="r3">❔</div>
   </div>
-  <button id="spin">ابدأ السبين</button>
+  
+  <div class="controls">
+    <button id="spin">ابدأ السبين</button>
+    <button id="reset">إعادة تعيين</button>
+  </div>
+  
+  <div id="result"></div>
   <div id="log"></div>
 
   <script src="slot.js"></script>
